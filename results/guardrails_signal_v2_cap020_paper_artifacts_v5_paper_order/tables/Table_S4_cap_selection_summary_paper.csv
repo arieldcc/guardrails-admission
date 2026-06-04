@@ -1,0 +1,3 @@
+Dataset,Final cap,Best tested cap by HR,Cap020 HR,Best HR,ΔHR vs best,Admissions / 1000 requests at cap020,Hit-yield at cap020,Pollution proxy at cap020
+Wikipedia-2007 web,0.020,0.025,0.675241,0.675266,-0.000026,8.574375000000002,1.395,0.6191132561792073
+Wiki-CDN-2018,0.020,0.015,0.536710,0.536750,-0.000041,11.506574074074074,0.766,0.5723116335695357

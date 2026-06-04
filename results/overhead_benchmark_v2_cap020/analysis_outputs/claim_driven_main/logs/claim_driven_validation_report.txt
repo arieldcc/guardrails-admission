@@ -1,0 +1,51 @@
+# Claim-driven overhead validation report
+Generated: 2026-05-14T20:14:24
+
+## Files used
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/run_level_summary.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/run_level_long.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/relative_overhead_vs_il_no_guard.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/relative_overhead_vs_gbdt.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/granular_percentiles.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/component_category_breakdown_summary.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/component_breakdown_summary.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/tables/metric_dictionary.csv
+- results/overhead_benchmark_v2_cap020/analysis_outputs/logs/validation_report.txt
+
+## Datasets detected
+Wikipedia-2007 web, Wiki-CDN-2018
+
+## Methods detected
+IL-no-guard, IL-guard, Delayed-GBDT
+
+## Capacities detected
+0.8, 1, 2, 3, 4, 5
+
+## Run completeness
+Each dataset-method-capacity has 3 runs for the main metric: YES
+
+## Metrics used in main figures
+Figure 1: avg_slot_control_s with run-level sample SD; Figure 2: relative delta_percent for avg_slot_control_s vs IL-no-guard; Figure 7: absolute slot-control time, marginal Guardrails overhead, and IL-guard component attribution summarized across capacities; Appendix figure: full component_share_percent with total_component_mean labels and G-minus-NG component-total deltas by dataset, capacity, method, and component
+
+## Metrics used in main table
+avg_slot_control_s, p95_slot_control_s, p99_slot_control_s, peak_rss_mb, Guard/control component_share_percent
+
+## Availability
+P95/P99 available: YES
+Component breakdown available: YES
+Peak RSS available: YES
+CPU available: NO
+
+## Skipped metrics and reasons
+- CPU utilization: unavailable in normalized metrics, so no CPU overhead element was generated.
+- CPU utilization is unavailable in the normalized metrics.
+
+## Reviewer-question audit
+- Q1. Do the figures show absolute overhead? YES. Figure 1 and Figure 7 Panel A report absolute mean slot-control time in seconds.
+- Q2. Do the figures isolate marginal Guardrails overhead? YES. Figure 2 and Figure 7 Panel B filter to IL-guard relative to IL-no-guard and exclude Delayed-GBDT.
+- Q3. Do the figures show whether guard/control dominates? YES. Figure 7 Panel C reports the IL-guard component attribution; the full per-capacity component breakdown is retained as an appendix figure/table.
+- Q4. Does the table report tail overhead? YES. The main table reports P95 and P99 relative slot-control deltas when available.
+- Q5. Does the table report memory overhead? YES. The table uses peak_rss_mb relative to IL-no-guard.
+- Q6. Does the output avoid statistical significance claims? YES. Captions, table note, validation report, and narrative describe all values as descriptive over three repeated runs.
+- Q7. Does the wording avoid claiming that negative overhead means Guardrails is intrinsically faster? YES. Captions, table note, and narrative state that negative values are workload-dependent measured outcomes.
+- Q8. Do the captions distinguish slot-level control-path overhead from request-serving latency? YES. The captions explicitly state that slot-control time is not online request-serving latency.

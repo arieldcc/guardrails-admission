@@ -1,0 +1,142 @@
+# Final Claim-Driven Validation Report
+
+- timestamp: 2026-05-14T19:55:52.353153+08:00
+- project root: `/Users/macbook/Dokuments/S3/Publikasi Jurnal Internasional/Jurnal/ILNSE/il_cache`
+- output root: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order`
+
+## Main Paper Order
+- Fig. 1: System architecture
+- Fig. 2: Slot-level execution
+- Table I: Experimental setup
+- Fig. 3: System-level hit-ratio comparison
+- Table II: System-level average HR
+- Fig. 4: Admission diagnostics across baselines
+- Table III: Admission diagnostics summary
+- Fig. 5: Effective-precision feedback attribution
+- Table IV: Effective-precision attribution summary
+- Fig. 6: Score-quality timing attribution
+- Table V: Score-quality timing summary
+- Fig. 7: Post-warm-up overhead
+- Table VI: Post-warm-up overhead summary
+
+## Appendix Order
+- Fig. S1: Paired bootstrap support
+- Fig. S2: Cap sensitivity and cap selection
+- Table S4: Cap-selection summary
+- Fig. S3: Selective suppression diagnostics
+- Table S1: Selective suppression diagnostics
+- Table S2: Precision correlation diagnostics
+- Fig. S4: Quality-only cap020 ablation
+- Table S3: Quality-only cap020 ablation
+- Fig. S5: Full overhead component breakdown
+
+## Validation Log
+- OK: Table I experimental setup generated - results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.csv; results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.tex
+- OK: Schema: cap020_budget_control_summary.csv - All 19 required columns present
+- OK: Schema: cap020_budget_control_avg_by_dataset.csv - All 11 required columns present
+- OK: Schema: effective_precision_summary.csv - All 13 required columns present
+- OK: Schema: score_quality_suppression_summary.csv - All 16 required columns present
+- OK: Schema: paired_slot_bootstrap_ci.csv - All 11 required columns present
+- OK: Schema: budget_match_ratios_cap020.csv - All 6 required columns present
+- OK: Dataset completeness: df_budget - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Cache-size completeness: df_budget - wikipedia_september_2007: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]; wiki2018: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]
+- OK: Dataset completeness: df_budget_avg - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Dataset completeness: df_precision - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Cache-size completeness: df_precision - wikipedia_september_2007: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]; wiki2018: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]
+- OK: Dataset completeness: df_suppression - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Cache-size completeness: df_suppression - wikipedia_september_2007: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]; wiki2018: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]
+- OK: Dataset completeness: df_ci - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Cache-size completeness: df_ci - wikipedia_september_2007: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]; wiki2018: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]
+- OK: Dataset completeness: df_ratios - present=['wiki2018', 'wikipedia_september_2007']; missing=[]
+- OK: Cache-size completeness: df_ratios - wikipedia_september_2007: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]; wiki2018: present=[0.8, 1.0, 2.0, 3.0, 4.0, 5.0], missing=[]
+- OK: Variant completeness: df_precision - missing=[]
+- OK: Variant completeness: df_budget - missing=[]
+- OK: Variant completeness: df_budget_avg - missing=[]
+- OK: Variant completeness: df_suppression - missing=[]
+- OK: Exact schedule replay selected-match ratio - max |match_ratio - 1| = 0.000000000000
+- OK: Replay clamp rate - all exact/permuted replay clamp rates zero=True
+- OK: Permuted schedule replay volume - Permuted schedule replay selected-match ratio is close to 1.0 for all cache sizes
+- OK: Cap-sensitivity availability - Found full-controller cap-sensitivity rows for variants=['full_cap005', 'full_cap010', 'full_cap015', 'full_cap020', 'full_cap025', 'full_cap050', 'full_cap075', 'full_no_cap']
+- OK: Cap-sensitivity missing variants - All requested full and quality-only cap-sensitivity variants found
+- OK: Quality-only cap020 source availability - found=['results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json', 'results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json']; missing=[]
+- OK: System-level baseline legend completeness - Methods: ['IL-guard', 'IL-no-guard', 'Delayed-GBDT', 'Windowed-2Hit-LRU', 'Delayed-TinyLFU']
+- WARN: Admission diagnostic proxy derivations - replay-summary-proxy:cache_hits/misses; replay-summary-proxy:miss_ratio; replay-summary-proxy:misses_per_1000_requests
+- OK: Admission diagnostics completeness - All dataset-method-capacity rows contain the required admission diagnostics.
+- WARN: Fallback table source: Table_S1_selective_suppression_diagnostics_paper - Missing v4 sources for Table_S1_selective_suppression_diagnostics_v4; reused existing v5 table files.
+- WARN: Fallback table source: Table_S2_precision_correlation_diagnostics_paper - Missing v4 sources for Table_S2_precision_correlation_diagnostics_v4; reused existing v5 table files.
+- WARN: Figure 1 diagram source - TODO: editable source diagram was not found in this notebook; update external Fig. 1 source with Guardrails Admission Controller wording.
+- WARN: Figure 2 diagram source - TODO: editable source diagram was not found in this notebook; update external Fig. 2 source with lagged effective precision, fill safeguard, η_top = 0.020, and delayed-apply order.
+- OK: Final public dataset labels - {'wikipedia_september_2007': 'Wikipedia-2007 web', 'wiki2018': 'Wiki-CDN-2018'}
+- OK: Admission diagnostics figure completeness - Fig. 4 methods: ['IL-guard', 'IL-no-guard', 'Delayed-GBDT', 'Windowed-2Hit-LRU', 'Delayed-TinyLFU']
+- OK: Effective-precision delta figure comparison - Precision-only minus Cap-only
+- OK: Main order excludes bootstrap and cap sensitivity - Fig. 1: System architecture; Fig. 2: Slot-level execution; Table I: Experimental setup; Fig. 3: System-level hit-ratio comparison; Table II: System-level average HR; Fig. 4: Admission diagnostics across baselines; Table III: Admission diagnostics summary; Fig. 5: Effective-precision feedback attribution; Table IV: Effective-precision attribution summary; Fig. 6: Score-quality timing attribution; Table V: Score-quality timing summary; Fig. 7: Post-warm-up overhead; Table VI: Post-warm-up overhead summary
+- OK: Required main artifacts exist - all present
+- OK: Unique color registry - METHOD_COLORS, DATASET_COLORS, REPLAY_COLORS, and COMPONENT_COLORS validated
+- OK: Color usage: Fig3_system_hit_ratio_comparison_paper - IL-guard, IL-no-guard, Delayed-GBDT, Windowed-2Hit-LRU, Delayed-TinyLFU
+- OK: Color usage: Fig4_admission_diagnostics_across_baselines_paper - Wikipedia-2007 web, Wiki-CDN-2018
+- OK: Color usage: Fig5_effective_precision_feedback_delta_paper - Wikipedia-2007 web, Wiki-CDN-2018
+- OK: Color usage: Fig6_score_quality_timing_attribution_paper - IL-guard, Exact schedule replay, Permuted schedule replay
+- OK: Main manifest contains Fig. 3: System-level hit-ratio comparison - Fig. 3: System-level hit-ratio comparison
+- OK: Main manifest contains Fig. 4: Admission diagnostics across baselines - Fig. 4: Admission diagnostics across baselines
+- OK: Main manifest contains Fig. 5: Effective-precision feedback attribution - Fig. 5: Effective-precision feedback attribution
+- OK: Main manifest contains Fig. 6: Score-quality timing attribution - Fig. 6: Score-quality timing attribution
+- OK: Main manifest has overhead as Fig. 7 - Fig. 7 overhead entry
+- OK: Fig. 4/table required terms - all present
+- OK: Fig. 4 panel (a) log scale - Panel (a) uses log-scale y-axis for admissions/1000 requests.
+- OK: Figure files exist: Fig3_system_hit_ratio_comparison_paper - missing=[]
+- OK: Figure files exist: Fig4_admission_diagnostics_across_baselines_paper - missing=[]
+- OK: Figure files exist: Fig5_effective_precision_feedback_delta_paper - missing=[]
+- OK: Figure files exist: Fig6_score_quality_timing_attribution_paper - missing=[]
+- OK: Figure files exist: FigS1_paired_bootstrap_support_paper - missing=[]
+- OK: Figure files exist: FigS2_cap_sensitivity_selection_paper - missing=[]
+- OK: Figure files exist: FigS3_selective_suppression_diagnostics_paper - missing=[]
+- OK: Figure files exist: FigS4_quality_only_cap020_ablation - missing=[]
+- OK: Figure readability/files: Fig3_system_hit_ratio_comparison_paper - 4166x1783px; nonwhite=0.0772; sizes OK
+- OK: Figure readability/files: Fig4_admission_diagnostics_across_baselines_paper - 4094x1772px; nonwhite=0.1791; sizes OK
+- OK: Figure readability/files: Fig5_effective_precision_feedback_delta_paper - 4166x2707px; nonwhite=0.0732; sizes OK
+- OK: Figure readability/files: Fig6_score_quality_timing_attribution_paper - 4166x2713px; nonwhite=0.0644; sizes OK
+- OK: Figure readability/files: FigS1_paired_bootstrap_support_paper - 4166x1919px; nonwhite=0.0803; sizes OK
+- OK: Figure readability/files: FigS2_cap_sensitivity_selection_paper - 4118x2930px; nonwhite=0.0667; sizes OK
+- OK: Figure readability/files: FigS3_selective_suppression_diagnostics_paper - 4037x2989px; nonwhite=0.0654; sizes OK
+- OK: Figure readability/files: FigS4_quality_only_cap020_ablation - 4166x2790px; nonwhite=0.0671; sizes OK
+- OK: Table files exist: Table_I_experimental_setup_paper - missing=[]
+- OK: Table files exist: Table_III_admission_diagnostics_across_baselines_paper - missing=[]
+- OK: Table files exist: Table_II_system_level_average_hr_paper - missing=[]
+- OK: Table files exist: Table_IV_effective_precision_attribution_paper - missing=[]
+- OK: Table files exist: Table_V_score_quality_timing_summary_paper - missing=[]
+- OK: Table files exist: Table_S4_cap_selection_summary_paper - missing=[]
+- OK: Table files exist: Table_S1_selective_suppression_diagnostics_paper - missing=[]
+- OK: Table files exist: Table_S2_precision_correlation_diagnostics_paper - missing=[]
+- OK: Table files exist: Table_S3_quality_only_cap020_ablation - missing=[]
+- OK: Standalone LRU baseline excluded - SYSTEM_POLICY_ORDER=['IL-guard', 'IL-no-guard', 'Delayed-GBDT', 'Windowed-2Hit-LRU', 'Delayed-TinyLFU']; standalone_lru_rows=0
+- OK: Forbidden final-paper terms absent - none
+- OK: LaTeX table control characters absent - none
+- OK: Required final-paper terms present - all present
+
+## Generated Figure List
+- Fig3_system_hit_ratio_comparison_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.svg`
+- Fig4_admission_diagnostics_across_baselines_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.svg`
+- Fig5_effective_precision_feedback_delta_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.svg`
+- Fig6_score_quality_timing_attribution_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.svg`
+- FigS1_paired_bootstrap_support_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.svg`
+- FigS2_cap_sensitivity_selection_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.svg`
+- FigS3_selective_suppression_diagnostics_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.svg`
+- FigS4_quality_only_cap020_ablation: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.png`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.pdf`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.svg`
+
+## Generated Table List
+- Table_I_experimental_setup_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.tex`
+- Table_III_admission_diagnostics_across_baselines_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_III_admission_diagnostics_across_baselines_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_III_admission_diagnostics_across_baselines_paper.tex`
+- Table_II_system_level_average_hr_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_II_system_level_average_hr_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_II_system_level_average_hr_paper.tex`
+- Table_IV_effective_precision_attribution_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_IV_effective_precision_attribution_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_IV_effective_precision_attribution_paper.tex`
+- Table_V_score_quality_timing_summary_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_V_score_quality_timing_summary_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_V_score_quality_timing_summary_paper.tex`
+- Table_S4_cap_selection_summary_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S4_cap_selection_summary_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S4_cap_selection_summary_paper.tex`
+- Table_S1_selective_suppression_diagnostics_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.tex`
+- Table_S2_precision_correlation_diagnostics_paper: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.tex`
+- Table_S3_quality_only_cap020_ablation: `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S3_quality_only_cap020_ablation.csv`, `results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S3_quality_only_cap020_ablation.tex`
+
+## Warnings
+- Admission diagnostic proxy derivations: WARN - replay-summary-proxy:cache_hits/misses; replay-summary-proxy:miss_ratio; replay-summary-proxy:misses_per_1000_requests
+- Fallback table source: Table_S1_selective_suppression_diagnostics_paper: WARN - Missing v4 sources for Table_S1_selective_suppression_diagnostics_v4; reused existing v5 table files.
+- Fallback table source: Table_S2_precision_correlation_diagnostics_paper: WARN - Missing v4 sources for Table_S2_precision_correlation_diagnostics_v4; reused existing v5 table files.
+- Figure 1 diagram source: WARN - TODO: editable source diagram was not found in this notebook; update external Fig. 1 source with Guardrails Admission Controller wording.
+- Figure 2 diagram source: WARN - TODO: editable source diagram was not found in this notebook; update external Fig. 2 source with lagged effective precision, fill safeguard, η_top = 0.020, and delayed-apply order.

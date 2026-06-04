@@ -1,0 +1,131 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "policy": "TINYLFU",
+  "model_name": "baseline_tinylfu_delayed",
+  "baseline_type": "standard_cache_baseline",
+  "learner_baseline": false,
+  "protocol": "one_slot_delayed_admission",
+  "trace_path": "data/raw/wikipedia_september_2007/wiki.1190153705.gz",
+  "total_requests_config": 9000000,
+  "warmup_requests_config": 1000000,
+  "slot_size": 100000,
+  "num_unique_objects": 1527731,
+  "cache_size_percentages": [
+    0.8,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "cache_sizes_objects": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "results": [
+    {
+      "capacity_percent": 0.8,
+      "cache_size_objects": 12221,
+      "cache_hits": 3920799,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.490099875,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_12221.json"
+    },
+    {
+      "capacity_percent": 1.0,
+      "cache_size_objects": 15277,
+      "cache_hits": 4233469,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.529183625,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_15277.json"
+    },
+    {
+      "capacity_percent": 2.0,
+      "cache_size_objects": 30554,
+      "cache_hits": 5014456,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.626807,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_30554.json"
+    },
+    {
+      "capacity_percent": 3.0,
+      "cache_size_objects": 45831,
+      "cache_hits": 5147090,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.64338625,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_45831.json"
+    },
+    {
+      "capacity_percent": 4.0,
+      "cache_size_objects": 61109,
+      "cache_hits": 5255015,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.656876875,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_61109.json"
+    },
+    {
+      "capacity_percent": 5.0,
+      "cache_size_objects": 76386,
+      "cache_hits": 5335073,
+      "cache_requests": 8000000,
+      "hit_ratio": 0.666884125,
+      "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_76386.json"
+    }
+  ],
+  "hr_curve": [
+    {
+      "capacity_percent": 0.8,
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.490099875
+    },
+    {
+      "capacity_percent": 1.0,
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.529183625
+    },
+    {
+      "capacity_percent": 2.0,
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.626807
+    },
+    {
+      "capacity_percent": 3.0,
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.64338625
+    },
+    {
+      "capacity_percent": 4.0,
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.656876875
+    },
+    {
+      "capacity_percent": 5.0,
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.666884125
+    }
+  ],
+  "avg_hr": 0.6022062916666667,
+  "best": {
+    "capacity_percent": 5.0,
+    "cache_size_objects": 76386,
+    "cache_hits": 5335073,
+    "cache_requests": 8000000,
+    "hit_ratio": 0.666884125,
+    "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_76386.json"
+  },
+  "worst": {
+    "capacity_percent": 0.8,
+    "cache_size_objects": 12221,
+    "cache_hits": 3920799,
+    "cache_requests": 8000000,
+    "hit_ratio": 0.490099875,
+    "summary_path": "results/wikipedia_september_2007/001_summary_baseline_tinylfu_delayed_12221.json"
+  },
+  "results_root": "results",
+  "run_id": "001",
+  "reproducibility_seed": 42
+}

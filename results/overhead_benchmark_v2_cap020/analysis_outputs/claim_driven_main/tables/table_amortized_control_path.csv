@@ -1,0 +1,37 @@
+Dataset,Capacity,Method,mean slot-control time (s),Amortized control-path time (µs/request)
+Wiki-CDN-2018,0.8,Delayed-GBDT,4.84,48.376
+Wiki-CDN-2018,0.8,IL-guard,2.09,20.850
+Wiki-CDN-2018,0.8,IL-no-guard,2.04,20.436
+Wiki-CDN-2018,1,Delayed-GBDT,5.08,50.829
+Wiki-CDN-2018,1,IL-guard,2.05,20.527
+Wiki-CDN-2018,1,IL-no-guard,2.02,20.179
+Wiki-CDN-2018,2,Delayed-GBDT,4.75,47.528
+Wiki-CDN-2018,2,IL-guard,2.03,20.264
+Wiki-CDN-2018,2,IL-no-guard,2,19.957
+Wiki-CDN-2018,3,Delayed-GBDT,4.76,47.595
+Wiki-CDN-2018,3,IL-guard,2.07,20.665
+Wiki-CDN-2018,3,IL-no-guard,2.05,20.506
+Wiki-CDN-2018,4,Delayed-GBDT,5.57,55.720
+Wiki-CDN-2018,4,IL-guard,2.62,26.183
+Wiki-CDN-2018,4,IL-no-guard,2.31,23.120
+Wiki-CDN-2018,5,Delayed-GBDT,5.64,56.435
+Wiki-CDN-2018,5,IL-guard,2.4,24.035
+Wiki-CDN-2018,5,IL-no-guard,2.35,23.467
+Wikipedia-2007 web,0.8,Delayed-GBDT,4.2,41.978
+Wikipedia-2007 web,0.8,IL-guard,1.31,13.105
+Wikipedia-2007 web,0.8,IL-no-guard,1.36,13.615
+Wikipedia-2007 web,1,Delayed-GBDT,4.27,42.714
+Wikipedia-2007 web,1,IL-guard,1.4,13.963
+Wikipedia-2007 web,1,IL-no-guard,1.33,13.258
+Wikipedia-2007 web,2,Delayed-GBDT,4.02,40.199
+Wikipedia-2007 web,2,IL-guard,1.19,11.908
+Wikipedia-2007 web,2,IL-no-guard,1.26,12.621
+Wikipedia-2007 web,3,Delayed-GBDT,3.98,39.836
+Wikipedia-2007 web,3,IL-guard,1.16,11.624
+Wikipedia-2007 web,3,IL-no-guard,1.36,13.567
+Wikipedia-2007 web,4,Delayed-GBDT,4.98,49.828
+Wikipedia-2007 web,4,IL-guard,1.76,17.594
+Wikipedia-2007 web,4,IL-no-guard,1.65,16.492
+Wikipedia-2007 web,5,Delayed-GBDT,4.8,48.009
+Wikipedia-2007 web,5,IL-guard,1.48,14.842
+Wikipedia-2007 web,5,IL-no-guard,1.55,15.498

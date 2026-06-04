@@ -1,0 +1,18 @@
+\begin{tabular}{llllllrl}
+\toprule
+Dataset & Variant & Avg selected admissions & Match ratio vs IL-guard & Avg HR & ΔHR vs IL-guard & Hit-yield / admission & Pollution proxy \\
+\midrule
+Wikipedia-2007 web & IL-guard & 68595.0 & 1.000 & 0.675241 & 0.000000 & 1.395250 & 0.619 \\
+Wikipedia-2007 web & Precision-only & 70985.7 & 1.066 & 0.675204 & -0.000036 & 1.284315 & 0.625 \\
+Wikipedia-2007 web & Exact schedule replay & 68595.0 & 1.000 & 0.675243 & 0.000002 & 1.395295 & 0.619 \\
+Wikipedia-2007 web & Permuted schedule replay & 68595.0 & 1.000 & 0.653623 & -0.021618 & 1.396562 & 0.628 \\
+Wikipedia-2007 web & Uniform matched & 69476.5 & 1.023 & 0.675007 & -0.000234 & 1.351447 & 0.620 \\
+Wikipedia-2007 web & Random matched & 69363.2 & 1.019 & 0.675022 & -0.000219 & 1.360584 & 0.621 \\
+Wiki-CDN-2018 & IL-guard & 103559.2 & 1.000 & 0.536710 & 0.000000 & 0.765971 & 0.572 \\
+Wiki-CDN-2018 & Precision-only & 104953.3 & 1.032 & 0.536762 & 0.000053 & 0.740769 & 0.573 \\
+Wiki-CDN-2018 & Exact schedule replay & 103559.2 & 1.000 & 0.536710 & 0.000000 & 0.765971 & 0.572 \\
+Wiki-CDN-2018 & Permuted schedule replay & 103559.2 & 1.000 & 0.512623 & -0.024087 & 0.793380 & 0.573 \\
+Wiki-CDN-2018 & Uniform matched & 103772.2 & 1.007 & 0.536596 & -0.000113 & 0.759609 & 0.572 \\
+Wiki-CDN-2018 & Random matched & 103302.3 & 1.004 & 0.536614 & -0.000096 & 0.758784 & 0.572 \\
+\bottomrule
+\end{tabular}

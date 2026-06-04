@@ -1,0 +1,3 @@
+Dataset,Capacities tested (%),Runs per configuration,Δ mean slot-control time vs IL-no-guard (%),Δ P95 slot-control time vs IL-no-guard (%),Δ P99 slot-control time vs IL-no-guard (%),Guard/control share in IL-guard (%),Peak RSS Δ vs IL-no-guard (%),Interpretation note
+Wikipedia-2007 web,"0.8, 1, 2, 3, 4, 5",3,-14.32 to +6.68,-38.56 to +26.51,-19.56 to +5.91,4.63 to 5.74,-4.00 to -0.09,Bounded and often lower measured control-path time; not interpreted as intrinsic speedup.
+Wiki-CDN-2018,"0.8, 1, 2, 3, 4, 5",3,+0.77 to +13.25,-14.72 to +28.78,-6.40 to +20.27,4.73 to 5.23,-3.23 to +0.85,Bounded but workload-dependent marginal control-path cost.

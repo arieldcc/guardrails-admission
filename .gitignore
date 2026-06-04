@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.mplconfig/
+
+# Raw traces are downloaded separately and can be very large.
+data/raw/
+
+# Do not add broad result trees accidentally. Stage selected paper artifacts
+# explicitly when preparing artifact releases.
+results/
+paper_artifacts_final/
+diagnostics/
+

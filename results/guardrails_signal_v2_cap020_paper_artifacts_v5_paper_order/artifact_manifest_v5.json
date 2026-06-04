@@ -1,0 +1,350 @@
+[
+  {
+    "name": "Table_I_experimental_setup_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_I_experimental_setup_paper.tex"
+    ],
+    "source_data_files": [],
+    "claim_supported": "Documents the fixed trace-driven replay setup, final dataset labels, cache-size sweep, delayed-admission discipline, and final Guardrails cap \u03b7_top = 0.020.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Paper Table I; generated in the v5 paper-order notebook rather than the overhead-only notebook."
+  },
+  {
+    "name": "Fig3_system_hit_ratio_comparison_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig3_system_hit_ratio_comparison_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/windowed_2hit_lru/wiki2018/wiki2018-001_summary_windowed_2hit_lru_w1slot_all_sizes.json",
+      "results/windowed_2hit_lru/wikipedia_september_2007/wikipedia2007-001_summary_windowed_2hit_lru_w1slot_all_sizes.json"
+    ],
+    "claim_supported": "System-level hit-ratio comparison across all main methods and workloads.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Paper Fig. 3 starts the results narrative with the overall system comparison."
+  },
+  {
+    "name": "Fig4_admission_diagnostics_across_baselines_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig4_admission_diagnostics_across_baselines_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/windowed_2hit_lru/wiki2018/wiki2018-001_summary_windowed_2hit_lru_w1slot_all_sizes.json",
+      "results/windowed_2hit_lru/wikipedia_september_2007/wikipedia2007-001_summary_windowed_2hit_lru_w1slot_all_sizes.json"
+    ],
+    "claim_supported": "Admission-side diagnostics across baselines; supports hit-ratio/admission-efficiency trade-off rather than universal diagnostic dominance.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Panel (a) uses a log y-axis because Delayed-TinyLFU has much larger insertion pressure."
+  },
+  {
+    "name": "Table_III_admission_diagnostics_across_baselines_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_III_admission_diagnostics_across_baselines_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_III_admission_diagnostics_across_baselines_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/windowed_2hit_lru/wiki2018/wiki2018-001_summary_windowed_2hit_lru_w1slot_all_sizes.json",
+      "results/windowed_2hit_lru/wikipedia_september_2007/wikipedia2007-001_summary_windowed_2hit_lru_w1slot_all_sizes.json"
+    ],
+    "claim_supported": "Admission diagnostics summary with metric-source disclosure.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Companion table for Fig. 4 admission diagnostics."
+  },
+  {
+    "name": "Table_II_system_level_average_hr_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_II_system_level_average_hr_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_II_system_level_average_hr_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wiki2018/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2_cap020/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_no_guard_legacy_NB_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wiki2018/wiki2018-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_baseline_tinylfu_delayed_all_sizes.json",
+      "results/wikipedia_september_2007/wikipedia2007-001_summary_delayed_gdbt_A2_all_sizes.json",
+      "results/windowed_2hit_lru/wiki2018/wiki2018-001_summary_windowed_2hit_lru_w1slot_all_sizes.json",
+      "results/windowed_2hit_lru/wikipedia_september_2007/wikipedia2007-001_summary_windowed_2hit_lru_w1slot_all_sizes.json"
+    ],
+    "claim_supported": "Average HR summary for the system-level baseline comparison.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Regenerated from the system-level baseline curves using final public labels."
+  },
+  {
+    "name": "Fig5_effective_precision_feedback_delta_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig5_effective_precision_feedback_delta_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/effective_precision_summary.csv"
+    ],
+    "claim_supported": "Precision-only versus cap-only deltas isolate effective-precision feedback.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Delta-based replacement for the previous raw-overlap effective-precision figure."
+  },
+  {
+    "name": "Table_IV_effective_precision_attribution_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_IV_effective_precision_attribution_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_IV_effective_precision_attribution_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/effective_precision_summary.csv"
+    ],
+    "claim_supported": "Concise effective-precision attribution summary with cap-only deltas.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Regenerated with the final delta columns requested for the paper table."
+  },
+  {
+    "name": "Fig6_score_quality_timing_attribution_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/Fig6_score_quality_timing_attribution_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/cap020_budget_control_summary.csv"
+    ],
+    "claim_supported": "Score-quality is supported through full, exact schedule replay, and permuted schedule replay budget-timing controls.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Renamed paper Fig. 6 places replay timing evidence after effective-precision attribution."
+  },
+  {
+    "name": "Table_V_score_quality_timing_summary_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_V_score_quality_timing_summary_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_V_score_quality_timing_summary_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/cap020_budget_control_summary.csv"
+    ],
+    "claim_supported": "Score-quality budget-control summary including selected-match ratio and admission outcomes.",
+    "recommended_placement": "main_paper",
+    "notes_on_interpretation": "Regenerated from cap020 budget-control summaries with the requested columns."
+  },
+  {
+    "name": "FigS1_paired_bootstrap_support_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS1_paired_bootstrap_support_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/paired_slot_bootstrap_ci.csv"
+    ],
+    "claim_supported": "Bootstrap CI evidence for score-quality timing and effective-precision feedback comparisons.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Appendix Fig. S1; supporting evidence, not a main-paper figure."
+  },
+  {
+    "name": "FigS2_cap_sensitivity_selection_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS2_cap_sensitivity_selection_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_no_cap_NB_all_sizes.json"
+    ],
+    "claim_supported": "Cap 0.020 is justified through cap-sensitivity evidence only.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Appendix Fig. S2; cap sensitivity is supporting evidence, not main Fig. 7."
+  },
+  {
+    "name": "Table_S4_cap_selection_summary_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S4_cap_selection_summary_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S4_cap_selection_summary_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_full_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_full_no_cap_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap005_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap010_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap015_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap025_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap050_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap075_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_no_cap_NB_all_sizes.json"
+    ],
+    "claim_supported": "Cap020 is supported as a robust near-best operating point through cap-sensitivity results.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Appendix Table S4 generated from cap-sensitivity summaries."
+  },
+  {
+    "name": "FigS3_selective_suppression_diagnostics_paper",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS3_selective_suppression_diagnostics_paper.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/score_quality_suppression_summary.csv"
+    ],
+    "claim_supported": "Appendix diagnostics for score-quality action visibility and masking.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Appendix Fig. S3 keeps selective suppression out of the main claim chain."
+  },
+  {
+    "name": "Table_S1_selective_suppression_diagnostics_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S1_selective_suppression_diagnostics_paper.tex"
+    ],
+    "claim_supported": "Appendix selective suppression diagnostic table.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Copied from v4 Table S1."
+  },
+  {
+    "name": "Table_S2_precision_correlation_diagnostics_paper",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S2_precision_correlation_diagnostics_paper.tex"
+    ],
+    "claim_supported": "Appendix precision-feedback correlation diagnostics.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Copied from v4 Table S2."
+  },
+  {
+    "name": "FigS4_quality_only_cap020_ablation",
+    "type": "figure",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.png",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.pdf",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/figures/FigS4_quality_only_cap020_ablation.svg"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/effective_precision_summary.csv",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json"
+    ],
+    "claim_supported": "Appendix ablation for score-quality without effective-precision feedback.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Generated only because quality-only cap020 source summaries were found."
+  },
+  {
+    "name": "Table_S3_quality_only_cap020_ablation",
+    "type": "table",
+    "output_paths": [
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S3_quality_only_cap020_ablation.csv",
+      "results/guardrails_signal_v2_cap020_paper_artifacts_v5_paper_order/tables/Table_S3_quality_only_cap020_ablation.tex"
+    ],
+    "source_data_files": [
+      "results/guardrails_signal_v2_cap020_budget_controls/effective_precision_summary.csv",
+      "results/guardrails_signal_v2/wikipedia_september_2007/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json",
+      "results/guardrails_signal_v2/wiki2018/001_summary_ilnse_A2_guardv2_quality_only_cap020_NB_all_sizes.json"
+    ],
+    "claim_supported": "Appendix quality-only cap020 ablation table.",
+    "recommended_placement": "appendix",
+    "notes_on_interpretation": "Generated only because quality-only cap020 source summaries were found."
+  }
+]

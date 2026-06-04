@@ -1,0 +1,1 @@
+Absolute slot-level control-path time under the one-slot delayed-apply protocol. Panels report Wiki-CDN-2018 and Wikipedia-2007 web separately. Markers show means over three repeated runs, error bars show sample standard deviation, and small open circles show the raw run-level observations. The metric is control-path time per slot, not online request-serving latency.

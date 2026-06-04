@@ -1,0 +1,18 @@
+\begin{tabular}{lllrlrll}
+\toprule
+Dataset & Method & Avg HR & Admissions / 1000 requests & Pollution proxy & Hit-yield / admission & Admission precision & Metric source \\
+\midrule
+Wikipedia-2007 web & IL-guard & 0.675241 & 8.574375 & 0.619 & 1.395250 & 0.099 & event-log \\
+Wikipedia-2007 web & IL-no-guard & 0.669959 & 33.629062 & 0.674 & 0.802020 & 0.068 & event-log \\
+Wikipedia-2007 web & Delayed-GBDT & 0.658630 & 11.044896 & 0.690 & 0.917052 & 0.072 & event-log \\
+Wikipedia-2007 web & Windowed-2Hit-LRU & 0.662582 & 16.682375 & 0.714 & 0.285848 & n/a & event-log \\
+Wikipedia-2007 web & Delayed-TinyLFU & 0.602206 & 397.793708 & 0.398 & 1.580873 & n/a & replay-summary-proxy \\
+Wiki-CDN-2018 & IL-guard & 0.536710 & 11.506574 & 0.572 & 0.765971 & 0.107 & event-log \\
+Wiki-CDN-2018 & IL-no-guard & 0.527306 & 46.156167 & 0.623 & 0.520124 & 0.079 & event-log \\
+Wiki-CDN-2018 & Delayed-GBDT & 0.517902 & 19.569056 & 0.658 & 0.483516 & 0.073 & event-log \\
+Wiki-CDN-2018 & Windowed-2Hit-LRU & 0.519497 & 27.006889 & 0.670 & 0.330114 & n/a & event-log \\
+Wiki-CDN-2018 & Delayed-TinyLFU & 0.447740 & 552.259537 & 0.552 & 0.841459 & n/a & replay-summary-proxy \\
+\bottomrule
+\end{tabular}
+\vspace{0.4ex}
+\noindent\scriptsize{Lower insertion pressure and pollution proxy are better; higher hit-yield per admission and HR are better. Proxy-derived diagnostics are used only for contextual comparison.}

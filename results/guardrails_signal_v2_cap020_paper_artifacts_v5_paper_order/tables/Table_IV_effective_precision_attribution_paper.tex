@@ -1,0 +1,14 @@
+\begin{tabular}{llllrrrrll}
+\toprule
+Dataset & Variant & Avg HR & ΔHR vs Cap-only & Admissions / 1000 requests & ΔAdmissions / 1000 vs Cap-only & Hit-yield / admission & ΔHit-yield vs Cap-only & Pollution proxy & ΔPollution vs Cap-only \\
+\midrule
+Wikipedia-2007 web & Cap-only & 0.674387 & 0.000000 & 9.415021 & 0.000000 & 1.154301 & 0.000000 & 0.634 & 0.000 \\
+Wikipedia-2007 web & Precision-only & 0.675204 & 0.000817 & 8.873208 & -0.541813 & 1.284315 & 0.130013 & 0.625 & -0.009 \\
+Wikipedia-2007 web & IL-guard & 0.675241 & 0.000854 & 8.574375 & -0.840646 & 1.395250 & 0.240949 & 0.619 & -0.015 \\
+Wiki-CDN-2018 & Cap-only & 0.535250 & 0.000000 & 12.115296 & 0.000000 & 0.700167 & 0.000000 & 0.578 & 0.000 \\
+Wiki-CDN-2018 & Precision-only & 0.536762 & 0.001513 & 11.661481 & -0.453815 & 0.740769 & 0.040602 & 0.573 & -0.004 \\
+Wiki-CDN-2018 & IL-guard & 0.536710 & 0.001460 & 11.506574 & -0.608722 & 0.765971 & 0.065805 & 0.572 & -0.005 \\
+\bottomrule
+\end{tabular}
+\vspace{0.4ex}
+\noindent\scriptsize{The causal contrast for Fig. 5 is Precision-only versus Cap-only; the IL-guard row is retained as full-controller context.}

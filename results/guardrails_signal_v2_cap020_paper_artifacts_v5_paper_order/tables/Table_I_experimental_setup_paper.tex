@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\caption{Experimental setup for trace-driven replay. All experiments use object-level trace replay with fixed LRU eviction and one-slot delayed admission. Guardrails controls admission only and does not modify the eviction policy.}
+\label{tab:experimental_setup}
+\centering
+\footnotesize
+\begin{tabular}{lll}
+\toprule
+\textbf{Item} & \textbf{Wikipedia-2007 web} & \textbf{Wiki-CDN-2018} \\
+\midrule
+Trace source & Urdaneta et al. & Song et al. \\
+Replay prefix & 9,000,000 requests & 10,000,000 requests \\
+Warm-up prefix & 1,000,000 requests & 1,000,000 requests \\
+Evaluated requests & 8,000,000 requests & 9,000,000 requests \\
+Slot size & 100,000 requests/slot & 100,000 requests/slot \\
+Evaluated slots & 80 & 90 \\
+Distinct objects in prefix & 1,527,731 & 2,015,444 \\
+Cache-size sweep & $\{0.8,1,2,3,4,5\}\%$ of prefix catalog & $\{0.8,1,2,3,4,5\}\%$ of prefix catalog \\
+Cache objects & 12,221--76,386 & 16,123--100,772 \\
+Eviction policy & Fixed LRU & Fixed LRU \\
+Admission timing & One-slot delayed apply & One-slot delayed apply \\
+Scoring discipline & Score candidates with $f_{t-1}$; save $A_t$; update scorer after selection & Score candidates with $f_{t-1}$; save $A_t$; update scorer after selection \\
+Feature set & A2: six recency gaps + four slot-history frequency counters & A2: six recency gaps + four slot-history frequency counters \\
+Slot labels & Top 20\% most frequent slot objects; floor rounding; no tie expansion & Top 20\% most frequent slot objects; floor rounding; no tie expansion \\
+Incremental learner & Learn++.NSE + Gaussian Naive Bayes; $a=0.5$, $b=10$; max 20 learners & Learn++.NSE + Gaussian Naive Bayes; $a=0.5$, $b=10$; max 20 learners \\
+Final Guardrails cap & $\eta_{\mathrm{top}}=0.020$ & $\eta_{\mathrm{top}}=0.020$ \\
+Compared policies & IL-guard, IL-no-guard, Delayed-GBDT, Windowed-2Hit-LRU, Delayed-TinyLFU & IL-guard, IL-no-guard, Delayed-GBDT, Windowed-2Hit-LRU, Delayed-TinyLFU \\
+Overhead protocol & Post-warm-up slot-boundary control-path timing; 3 repeated runs/configuration & Post-warm-up slot-boundary control-path timing; 3 repeated runs/configuration \\
+\bottomrule
+\end{tabular}
+\end{table*}
