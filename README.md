@@ -1,35 +1,47 @@
 # Edge IL Cache Experiments
 
-This repository contains code for IL-based edge caching experiments
-(guard/no-guard variants), overhead measurement, and analysis notebooks.
+This repository provides the reproducibility package for IL-based edge caching
+experiments with Guardrails and no-guard variants, computational-overhead
+measurement, and the analysis notebook used to produce the paper artifacts. It
+is intended to support journal review by documenting the experimental
+configuration, source-code mapping, processed inputs, and generated figures and
+tables used in the submitted manuscript.
 
-## 1. Project Setup
+## 1. Reproducibility Environment
 
-Create the Conda environment from `environment.yml`:
+The Python environment used for the experiments is specified in
+`environment.yml`. The environment can be reconstructed with Conda as follows:
 
 ```bash
 conda env create -f environment.yml
 ```
 
-Activate the environment:
+The corresponding environment name is `edge_il_cache`:
 
 ```bash
 conda activate edge_il_cache
 ```
 
-## 2. Dataset Preparation
+## 2. Dataset Organization
 
-Important: the experiment scripts expect datasets under `data/raw/...` (not
-`data/row/...`).
+The experiment code resolves input traces under `data/raw/...`. The expected
+dataset directories are:
 
-Create dataset folders:
+```text
+data/raw/wikipedia_september_2007/
+data/raw/wiki2018/
+```
+
+The directory structure can be initialized as:
 
 ```bash
 mkdir -p data/raw/wikipedia_september_2007
 mkdir -p data/raw/wiki2018
 ```
 
-Download datasets:
+The two traces used by the paper are the Wikipedia September 2007 trace and the
+Wiki2018 CDN trace. Their original sources are recorded below for
+reproducibility:
 
 ```bash
 # Wikipedia September 2007
@@ -41,23 +53,27 @@ curl -L "http://lrb.cs.princeton.edu/wiki2018.tr.tar.gz" \
   -o data/raw/wiki2018/wiki2018.tr.tar.gz
 ```
 
-Convert `wiki2018.tr.tar.gz` to `wiki2018.gz` (10M prefix) using the provided
-script:
+The Wiki2018 archive is converted to the 10M-prefix `wiki2018.gz` file by the
+repository conversion script:
 
 ```bash
 python scripts/convert_wiki2018.py
 ```
 
-This script writes:
+The conversion produces:
 
 - `data/raw/wiki2018/wiki2018.gz`
 
-The common datasets supported by the main paper commands below are:
+The paper experiments use the following dataset identifiers:
 
 - `wikipedia_september_2007`
 - `wiki2018`
 
-## 3. Run Main Experiments
+## 3. Main Experiment Specification
+
+This section records the command lines corresponding to the five model
+families evaluated in the paper. Each command block is parameterized over the
+two datasets used in the manuscript: `wikipedia_september_2007` and `wiki2018`.
 
 ### 3.1 No Guard
 
@@ -127,10 +143,11 @@ for ds in wikipedia_september_2007 wiki2018; do
 done
 ```
 
-## 4. Run Overhead Experiments
+## 4. Overhead Experiment Specification
 
-Use the orchestration script to run the three overhead models across both
-datasets with repeated measurements:
+The overhead evaluation uses the no-guard, guard, and Delayed-GBDT models
+across both datasets. The submitted paper reports three repeated measurements
+per configuration:
 
 ```bash
 scripts/run_overhead_benchmark.sh \
@@ -143,7 +160,7 @@ scripts/run_overhead_benchmark.sh \
   --results-root results/overhead_benchmark
 ```
 
-Equivalent per-model commands are listed below.
+The per-model command lines corresponding to the same overhead protocol are:
 
 ### 4.1 No-Guard Overhead
 
@@ -195,11 +212,11 @@ done
 
 ## 5. Paper Figures And Tables
 
-The paper uses the following outputs after the main experiment and overhead
-commands. Figure and table numbers below follow the paper numbering, not the
-internal v5 artifact numbering. To render the figures on GitHub, keep the
-listed PNG files available in the repository or publish them as release
-artifacts and update the links accordingly.
+The paper uses the following outputs generated from the main experiment
+summaries, overhead summaries, and notebook v5. Figure and table numbers below
+follow the manuscript numbering rather than the internal v5 artifact numbering.
+The referenced PNG, PDF, SVG, CSV, and TeX files are included as review
+artifacts.
 
 ### Figure 3
 
@@ -340,14 +357,12 @@ Source files:
 | Wikipedia-2007 web | 0.8, 1, 2, 3, 4, 5 | 3 | -2.66 [-14.32, +6.68] | -10.14 [-38.56, +26.51] | -7.16 [-19.56, +5.91] | 5.36 [4.63, 5.74] | -1.74 [-4.00, -0.09] | unavailable |
 | Wiki-CDN-2018 | 0.8, 1, 2, 3, 4, 5 | 3 | +3.62 [+0.77, +13.25] | +2.17 [-14.72, +28.78] | +3.39 [-6.40, +20.27] | 5.02 [4.73, 5.23] | -1.00 [-3.23, +0.85] | unavailable |
 
-## 6. Mapped Code For GitHub Commit
+## 6. Source-Code Map For Review
 
-The intended GitHub commit should include the mapped source files below.
-Generated result files under `results/`, notebook outputs, caches, and
-`__pycache__/` files should not be committed for a code-only release. If the
-README is expected to render the paper figures directly on GitHub, include the
-specific paper artifact files listed in Section 5 or publish them separately as
-release artifacts.
+The repository includes the source files directly associated with the
+experiments, overhead measurements, notebook processing, and paper artifacts.
+The mapping below identifies the functional role of each source component for
+review and reproducibility.
 
 ### Guard And No-Guard
 
@@ -424,11 +439,11 @@ validation reports.
 
 ### Required v5 Input Root
 
-The notebook requires this directory:
+The notebook consumes the following directory:
 
 - `results/guardrails_signal_v2_cap020_budget_controls/`
 
-Required CSV inputs:
+CSV inputs:
 
 - `results/guardrails_signal_v2_cap020_budget_controls/cap020_budget_control_summary.csv`
 - `results/guardrails_signal_v2_cap020_budget_controls/cap020_budget_control_avg_by_dataset.csv`
@@ -522,7 +537,7 @@ The notebook tries to copy these v4 tables if they exist:
 - `results/guardrails_signal_v2_cap020_paper_artifacts_v4/tables/Table_S2_precision_correlation_diagnostics_v4.csv`
 - `results/guardrails_signal_v2_cap020_paper_artifacts_v4/tables/Table_S2_precision_correlation_diagnostics_v4.tex`
 
-If the v4 files are missing but the v5 destination tables already exist, the
+When v4 copies are unavailable and the v5 destination tables already exist, the
 notebook reuses the existing v5 copies.
 
 ### Overhead Artifacts Referenced By v5
@@ -589,9 +604,9 @@ Generated metadata and text outputs:
 
 ## 8. IL Simulation Entrypoints
 
-Use `src/experiments/run_il_cache_guard_ablation.py` as the central IL
-simulation entrypoint for HR/ablation experiments. It delegates to the two core
-IL implementations:
+`src/experiments/run_il_cache_guard_ablation.py` is the central IL simulation
+entrypoint for HR and ablation experiments. It delegates to the two core IL
+implementations:
 
 - `src/experiments/run_il_cache_guard_no_guard.py`
 - `src/experiments/run_il_cache_guard_only.py`
@@ -601,7 +616,7 @@ runs behind one CLI while preserving the original core simulation code. The
 paper-overhead runners remain separate because they carry timing
 instrumentation and benchmark metadata.
 
-Example:
+Representative invocation:
 
 ```bash
 python3 src/experiments/run_il_cache_guard_ablation.py \
@@ -644,11 +659,11 @@ update, and model rebuild when triggered. The GBDT runner also logs
 `time_buffer_add_s`, `time_history_update_s`, `time_rebuild_s`,
 `rebuild_triggered`, and `rebuild_phase`.
 
-## 10. Reproducing The 0.8% Overhead Benchmark
+## 10. 0.8% Overhead Benchmark Protocol
 
-Run each model/dataset/capacity in a separate Python process. The benchmark
-script sets deterministic threading-related environment variables and defaults
-to five repeats:
+Each model, dataset, and capacity configuration is measured in a separate
+Python process. The benchmark script sets deterministic threading-related
+environment variables. The manuscript uses three repeats per configuration:
 
 ```bash
 scripts/run_overhead_benchmark.sh --repeats 3 --results-root results/overhead_benchmark
@@ -666,7 +681,7 @@ contains:
 Aggregate summaries are written to `aggregate_summary.json` and
 `aggregate_summary.csv` under each dataset/model aggregate directory.
 
-For a single run:
+Single-run reference invocations:
 
 ```bash
 python3 src/experiments/run_gbdt_cache_overhead.py \
@@ -694,14 +709,14 @@ python3 src/experiments/run_il_cache_overhead_guard.py \
   --disable-progress
 ```
 
-Post-process an existing slot log:
+Existing slot logs are summarized with:
 
 ```bash
 python3 src/experiments/summarize_overhead.py \
   --slot-log results/overhead_benchmark/wikipedia_september_2007/r01_ilnse_A2_guard_full_nb_overhead_12221/slot_log.jsonl
 ```
 
-Smoke-test command for instrumentation only:
+Instrumentation-only smoke-test invocation:
 
 ```bash
 python3 src/experiments/run_il_cache_overhead_guard.py \
@@ -713,7 +728,7 @@ python3 src/experiments/run_il_cache_overhead_guard.py \
   --smoke-test
 ```
 
-For the paper, use only these `overhead_summary.json` fields:
+The paper overhead analysis uses the following `overhead_summary.json` fields:
 
 - `avg_slot_control_s`
 - `p95_slot_control_s`
@@ -723,7 +738,7 @@ For the paper, use only these `overhead_summary.json` fields:
 - `p95_miss_candidates`
 - `peak_rss_mb`
 
-Optional diagnostics:
+Additional diagnostic fields:
 
 - `rebuild_time_total_s`
 - `rebuild_slots_count`
@@ -733,9 +748,10 @@ Optional diagnostics:
 - `budget_time_total_s`
 - `guard_signal_time_total_s`
 
-Do not use total script runtime, wall-clock time including trace reading,
-warm-up-inclusive diagnostic averages, direct `resource.ru_maxrss` conversions,
-or per-slot averages of score microseconds per candidate.
+The paper analysis excludes total script runtime, wall-clock time including
+trace reading, warm-up-inclusive diagnostic averages, direct
+`resource.ru_maxrss` conversions, and per-slot averages of score microseconds
+per candidate.
 
 ## 11. IL Runtime Optimization
 
@@ -747,7 +763,7 @@ reported separately by `check_il_optimization_parity.py`.
 - `--impl-mode optimized`: implementation path using slot array reuse and array-based `LearnNSE.update_slot_arrays`.
 - `optimized_components`: list of implementation-level optimizations enabled by the selected mode.
 
-Before using optimized IL overhead numbers in the paper, run:
+The optimized IL overhead path is validated with:
 
 ```bash
 python3 -m src.experiments.check_il_optimization_parity \
@@ -761,6 +777,6 @@ python3 -m src.experiments.check_il_optimization_parity \
 ```
 
 Parity validation is reported in `parity_result.json`. IL runtime optimization
-is behavior-preserving only when the parity checker passes: HR, cache hits,
-admissions, pollution, and hit-yield must be identical to the reference
-implementation. Only runtime overhead may change.
+is treated as behavior-preserving only when the parity checker passes: HR,
+cache hits, admissions, pollution, and hit-yield must match the reference
+implementation exactly. Only runtime overhead is expected to change.
