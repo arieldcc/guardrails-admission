@@ -134,7 +134,7 @@ datasets with repeated measurements:
 
 ```bash
 scripts/run_overhead_benchmark.sh \
-  --repeats 5 \
+  --repeats 3 \
   --dataset all \
   --policy all \
   --capacity-percent 0.8 \
