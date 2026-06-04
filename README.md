@@ -651,7 +651,7 @@ script sets deterministic threading-related environment variables and defaults
 to five repeats:
 
 ```bash
-scripts/run_overhead_benchmark.sh --repeats 5 --results-root results/overhead_benchmark
+scripts/run_overhead_benchmark.sh --repeats 3 --results-root results/overhead_benchmark
 ```
 
 Outputs are written under `results/overhead_benchmark/`. Each run directory
